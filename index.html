@@ -397,7 +397,7 @@
                 <h2 class="section-title"><i>📤</i> Unggah Foto</h2>
                 <div class="upload-area" id="uploadArea">
                     <div class="upload-icon">📁</div>
-                    <p class="upload-text">pilih gambar di file anda</p>
+                    <p class="upload-text">Klik untuk memilih gambar dari perangkat Anda</p>
                     <p>atau</p>
                     <input type="file" id="fileInput" accept="image/*" style="display: none;">
                     <button class="btn" id="browseBtn"><i>📂</i> Pilih Gambar</button>
@@ -553,6 +553,10 @@
         
         // Event Listeners
         browseBtn.addEventListener('click', () => fileInput.click());
+        
+        // Perubahan utama: area upload langsung membuka dialog file
+        uploadArea.addEventListener('click', () => fileInput.click());
+        
         fileInput.addEventListener('change', handleImageUpload);
         uploadArea.addEventListener('dragover', (e) => {
             e.preventDefault();
@@ -955,7 +959,7 @@
         }
         
         // Perbaiki typo di event listener
-        const applyHDR = applyHDRFULL;
+        const applyHDREFFECT = applyHDRFULL;
         
         init();
     </script>
